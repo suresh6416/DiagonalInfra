@@ -43,6 +43,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -67,6 +95,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\angular.min.js.map" />
+    <Content Include="scripts\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,11 +108,319 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="app\views\home.html" />
+    <Content Include="app\views\layout\layout.html" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\custom.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\assets\aleft.png" />
+    <Content Include="css\assets\aright.png" />
+    <Content Include="css\assets\arrowleft.png" />
+    <Content Include="css\assets\arrowright.png" />
+    <Content Include="css\assets\arrow_large_left.png" />
+    <Content Include="css\assets\arrow_large_right.png" />
+    <Content Include="css\assets\arrow_left.png" />
+    <Content Include="css\assets\arrow_left2.png" />
+    <Content Include="css\assets\arrow_right.png" />
+    <Content Include="css\assets\arrow_right2.png" />
+    <Content Include="css\assets\black50.png" />
+    <Content Include="css\assets\boxed_bgtile.png" />
+    <Content Include="css\assets\bullet.png" />
+    <Content Include="css\assets\bullets.png" />
+    <Content Include="css\assets\bullets2.png" />
+    <Content Include="css\assets\bullet_boxed.png" />
+    <Content Include="css\assets\coloredbg.png" />
+    <Content Include="css\assets\grain.png" />
+    <Content Include="css\assets\gridtile.png" />
+    <Content Include="css\assets\gridtile_3x3.png" />
+    <Content Include="css\assets\gridtile_3x3_white.png" />
+    <Content Include="css\assets\gridtile_white.png" />
+    <Content Include="css\assets\large_left.png" />
+    <Content Include="css\assets\large_right.png" />
+    <Content Include="css\assets\loader.gif" />
+    <Content Include="css\assets\loader2.gif" />
+    <Content Include="css\assets\navigdots.png" />
+    <Content Include="css\assets\navigdots_bgtile.png" />
+    <Content Include="css\assets\next-slide.png" />
+    <Content Include="css\assets\prev-slide.png" />
+    <Content Include="css\assets\shadow1.png" />
+    <Content Include="css\assets\shadow2.png" />
+    <Content Include="css\assets\shadow3.png" />
+    <Content Include="css\assets\small_left.png" />
+    <Content Include="css\assets\small_left_boxed.png" />
+    <Content Include="css\assets\small_right.png" />
+    <Content Include="css\assets\small_right_boxed.png" />
+    <Content Include="css\assets\timer.png" />
+    <Content Include="css\assets\timerdot.png" />
+    <Content Include="css\assets\transparent.jpg" />
+    <Content Include="css\assets\white50.png" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\flaticon.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\hover.css" />
+    <Content Include="css\jquery.fancybox.css" />
+    <Content Include="css\masterslider\jquery.easing.min.js" />
+    <Content Include="css\masterslider\jquery.min.js" />
+    <Content Include="css\masterslider\masterslider.js" />
+    <Content Include="css\masterslider\masterslider.min.js" />
+    <Content Include="css\masterslider\ms-videogallery.css" />
+    <Content Include="css\masterslider\skins\black-1\black-skin-1-retina.png" />
+    <Content Include="css\masterslider\skins\black-1\black-skin-1.png" />
+    <Content Include="css\masterslider\skins\black-1\style.css" />
+    <Content Include="css\masterslider\skins\black-2\black-skin-2-retina.png" />
+    <Content Include="css\masterslider\skins\black-2\black-skin-2.png" />
+    <Content Include="css\masterslider\skins\black-2\style.css" />
+    <Content Include="css\masterslider\skins\contrast\contrast-skin-retina.png" />
+    <Content Include="css\masterslider\skins\contrast\contrast-skin.png" />
+    <Content Include="css\masterslider\skins\contrast\style.css" />
+    <Content Include="css\masterslider\skins\default\light-skin-1-retina.png" />
+    <Content Include="css\masterslider\skins\default\light-skin-1.png" />
+    <Content Include="css\masterslider\skins\default\style.css" />
+    <Content Include="css\masterslider\skins\light-2\light-skin-2-retina.png" />
+    <Content Include="css\masterslider\skins\light-2\light-skin-2.png" />
+    <Content Include="css\masterslider\skins\light-2\style.css" />
+    <Content Include="css\masterslider\skins\light-3\light-skin-3-retina.png" />
+    <Content Include="css\masterslider\skins\light-3\light-skin-3.png" />
+    <Content Include="css\masterslider\skins\light-3\style.css" />
+    <Content Include="css\masterslider\skins\light-4\light-skin-4-retina.png" />
+    <Content Include="css\masterslider\skins\light-4\light-skin-4.png" />
+    <Content Include="css\masterslider\skins\light-4\style.css" />
+    <Content Include="css\masterslider\skins\light-5\light-skin-5-retina.png" />
+    <Content Include="css\masterslider\skins\light-5\light-skin-5.png" />
+    <Content Include="css\masterslider\skins\light-5\style.css" />
+    <Content Include="css\masterslider\skins\light-6\light-skin-6-retina.png" />
+    <Content Include="css\masterslider\skins\light-6\light-skin-6.png" />
+    <Content Include="css\masterslider\skins\light-6\style.css" />
+    <Content Include="css\masterslider\skins\metro\metro-skin-retina.png" />
+    <Content Include="css\masterslider\skins\metro\metro-skin.png" />
+    <Content Include="css\masterslider\skins\metro\style.css" />
+    <Content Include="css\masterslider\style\blank.gif" />
+    <Content Include="css\masterslider\style\grab.cur" />
+    <Content Include="css\masterslider\style\grab.png" />
+    <Content Include="css\masterslider\style\grabbing.cur" />
+    <Content Include="css\masterslider\style\grabbing.png" />
+    <Content Include="css\masterslider\style\loading-1-dark.gif" />
+    <Content Include="css\masterslider\style\loading-1-light.gif" />
+    <Content Include="css\masterslider\style\loading-1.gif" />
+    <Content Include="css\masterslider\style\loading-2-dark.gif" />
+    <Content Include="css\masterslider\style\loading-2-light.gif" />
+    <Content Include="css\masterslider\style\loading-2.gif" />
+    <Content Include="css\masterslider\style\masterslider.css" />
+    <Content Include="css\masterslider\style\video-close-btn.png" />
+    <Content Include="css\owl.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\revolution-slider.css" />
+    <Content Include="css\style.css" />
+    <Content Include="fonts\flaticon.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\revicons90c6.svg" />
+    <Content Include="gallery\gallery-2.html" />
+    <Content Include="gallery\gallery.html" />
+    <Content Include="gallery\video-tour.html" />
+    <Content Include="images\background\about-us-bg.jpg" />
+    <Content Include="images\background\bitscomplete.JPG" />
+    <Content Include="images\background\BitsHd.jpg" />
+    <Content Include="images\background\contact-bg.jpg" />
+    <Content Include="images\background\customer-testimonials.jpg" />
+    <Content Include="images\background\hdcontactusbanner.jpg" />
+    <Content Include="images\background\LotusHeading.JPG" />
+    <Content Include="images\background\page-title-bg-1.jpg" />
+    <Content Include="images\background\Services.jpg" />
+    <Content Include="images\background\Testimonial.jpg" />
+    <Content Include="images\background\Testimonial.png" />
+    <Content Include="images\background\testimonials-bg.jpg" />
+    <Content Include="images\background\testimonials-featured2-01.jpg" />
+    <Content Include="images\fancybox\blank.gif" />
+    <Content Include="images\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="images\fancybox\fancybox_loading.gif" />
+    <Content Include="images\fancybox\fancybox_overlay.png" />
+    <Content Include="images\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="images\fancybox\fancybox_sprite.png" />
+    <Content Include="images\gallery\1.jpg" />
+    <Content Include="images\gallery\10.jpg" />
+    <Content Include="images\gallery\11.jpg" />
+    <Content Include="images\gallery\12.jpg" />
+    <Content Include="images\gallery\14.jpg" />
+    <Content Include="images\gallery\15.jpg" />
+    <Content Include="images\gallery\16.jpg" />
+    <Content Include="images\gallery\17.jpg" />
+    <Content Include="images\gallery\18.jpg" />
+    <Content Include="images\gallery\2.jpg" />
+    <Content Include="images\gallery\3.jpg" />
+    <Content Include="images\gallery\4.jpg" />
+    <Content Include="images\gallery\5.jpg" />
+    <Content Include="images\gallery\6.jpg" />
+    <Content Include="images\gallery\7.jpg" />
+    <Content Include="images\gallery\8.jpg" />
+    <Content Include="images\gallery\9.jpg" />
+    <Content Include="images\gallery\Bits1.jpg" />
+    <Content Include="images\gallery\bits2.jpg" />
+    <Content Include="images\gallery\bits3.jpg" />
+    <Content Include="images\gallery\bits4.jpg" />
+    <Content Include="images\gallery\bits5.jpg" />
+    <Content Include="images\gallery\Bits\Bits2.JPG" />
+    <Content Include="images\gallery\Bits\Bits3.JPG" />
+    <Content Include="images\gallery\Bits\Bits4.JPG" />
+    <Content Include="images\gallery\Bits\Bits5.JPG" />
+    <Content Include="images\gallery\Bits\Bits6.JPG" />
+    <Content Include="images\gallery\Bits\Bits7.JPG" />
+    <Content Include="images\gallery\Bits\bitsboard.JPG" />
+    <Content Include="images\gallery\Bits\BITSouter1.JPG" />
+    <Content Include="images\gallery\ebrouchers\LotusBrochure1.JPG" />
+    <Content Include="images\gallery\ebrouchers\LotusBrochure2.JPG" />
+    <Content Include="images\gallery\logo1.png" />
+    <Content Include="images\gallery\LotusHeights.jpg" />
+    <Content Include="images\gallery\LotusHeights\Lotus.JPG" />
+    <Content Include="images\gallery\LotusHeights\LotusConstruction1.JPG" />
+    <Content Include="images\gallery\LotusHeights\LotusConstruction2.JPG" />
+    <Content Include="images\gallery\LotusHeights\LotusConstruction3.JPG" />
+    <Content Include="images\gallery\LotusHeights\LotusImg.JPG" />
+    <Content Include="images\gallery\LotusHeights\LotusInterior1.JPG" />
+    <Content Include="images\gallery\LotusHeights\Lotusinterior2.JPG" />
+    <Content Include="images\gallery\LotusHeights\LotusLogo.JPG" />
+    <Content Include="images\gallery\LotusHeights\lotusPlan.JPG" />
+    <Content Include="images\gallery\video-image-1.jpg" />
+    <Content Include="images\gallery\video-thumb-1.jpg" />
+    <Content Include="images\icons\icon-caret-down.png" />
+    <Content Include="images\icons\icon-next-1.png" />
+    <Content Include="images\icons\icon-plus.png" />
+    <Content Include="images\icons\icon-prev-1.png" />
+    <Content Include="images\icons\icon-quote.png" />
+    <Content Include="images\icons\icon-toggle.png" />
+    <Content Include="images\icons\icon-video.png" />
+    <Content Include="images\icons\preloader.GIF" />
+    <Content Include="images\icons\submenu-icon.png" />
+    <Content Include="images\icons\testimonials-curve.png" />
+    <Content Include="images\icons\title-separator-big.png" />
+    <Content Include="images\icons\title-separator-small.png" />
+    <Content Include="images\logo-1.png" />
+    <Content Include="images\logo-2.png" />
+    <Content Include="images\logo-234x150.png" />
+    <Content Include="images\logo-3.png" />
+    <Content Include="images\logo-4.png" />
+    <Content Include="images\main-slider\1.jpg" />
+    <Content Include="images\main-slider\2.jpg" />
+    <Content Include="images\main-slider\3.jpg" />
+    <Content Include="images\main-slider\4.jpg" />
+    <Content Include="images\main-slider\bg.jpg" />
+    <Content Include="images\main-slider\Construction1.jpg" />
+    <Content Include="images\main-slider\East Facing Unit.jpg" />
+    <Content Include="images\main-slider\RealEstate.jpg" />
+    <Content Include="images\main-slider\Team.jpg" />
+    <Content Include="images\parallax\image-1.jpg" />
+    <Content Include="images\parallax\image-2.jpg" />
+    <Content Include="images\parallax\LotusHeights.jpg" />
+    <Content Include="images\resource\author-thumb-2.jpg" />
+    <Content Include="images\resource\author-thumb-3.jpg" />
+    <Content Include="images\resource\author-thumb.jpg" />
+    <Content Include="images\resource\blog-image-1.jpg" />
+    <Content Include="images\resource\blog-image-2.jpg" />
+    <Content Include="images\resource\blog-image-3.jpg" />
+    <Content Include="images\resource\blog-image-4.jpg" />
+    <Content Include="images\resource\blog-image-5.jpg" />
+    <Content Include="images\resource\blog-image-6.jpg" />
+    <Content Include="images\resource\featured-image-1.jpg" />
+    <Content Include="images\resource\image-1.jpg" />
+    <Content Include="images\resource\map-image.jpg" />
+    <Content Include="images\resource\testi-image-1.jpg" />
+    <Content Include="images\resource\testi-image-2.jpg" />
+    <Content Include="images\resource\testi-image-3.jpg" />
+    <Content Include="images\resource\testi-image-4.jpg" />
+    <Content Include="images\resource\testi-image-5.jpg" />
+    <Content Include="images\resource\testi-image-6.jpg" />
+    <Content Include="images\resource\testi-image-7.jpg" />
+    <Content Include="images\resource\thumb-1.jpg" />
+    <Content Include="images\resource\thumb-2.jpg" />
+    <Content Include="images\resource\thumb-3.jpg" />
+    <Content Include="images\resource\thumb-4.jpg" />
+    <Content Include="images\resource\thumb-5.jpg" />
+    <Content Include="images\resource\thumb-6.jpg" />
+    <Content Include="images\user.png" />
+    <Content Include="images\user1.png" />
+    <Content Include="index.html" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\bxslider.js" />
+    <Content Include="js\googlemaps.js" />
+    <Content Include="js\jquery.fancybox.pack.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.mixitup.js" />
+    <Content Include="js\jquery.nav.js" />
+    <Content Include="js\jquery.scrollTo.js" />
+    <Content Include="js\masterslider\jquery.easing.min.js" />
+    <Content Include="js\masterslider\masterslider.js" />
+    <Content Include="js\masterslider\masterslider.min.js" />
+    <Content Include="js\owl.js" />
+    <Content Include="js\respond.js" />
+    <Content Include="js\revolution.min.js" />
+    <Content Include="js\script.js" />
+    <Content Include="js\validate.js" />
+    <Content Include="js\wow.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="scripts\angular-mocks.js" />
+    <Content Include="scripts\angular-route.js" />
+    <Content Include="scripts\angular-route.min.js" />
+    <Content Include="scripts\angular-sanitize.js" />
+    <Content Include="scripts\angular-sanitize.min.js" />
+    <Content Include="scripts\angular-ui-router.min.js" />
+    <Content Include="scripts\angular.js" />
+    <Content Include="scripts\angular.min-1.6.5.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="fonts\flaticon.eot" />
+    <Content Include="fonts\flaticon.ttf" />
+    <Content Include="fonts\flaticon.woff" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\revicons90c6.eot" />
+    <Content Include="fonts\revicons90c6.ttf" />
+    <Content Include="fonts\revicons90c6.woff" />
+    <Content Include="css\assets\arrows.psd" />
+    <Content Include="css\assets\bullets.psd" />
+    <Content Include="css\assets\small_arrows.psd" />
+    <Content Include="css\masterslider\masterslider.min.js.map" />
+    <Content Include="images\gallery\ebrouchers\Dia.Lotusheights.pdf" />
+    <Content Include="images\gallery\ebrouchers\Lotusheightbrochure.pdf" />
+    <Content Include="images\main-slider\Dia.Lotus heights.pdf" />
+    <Content Include="images\main-slider\Lotus height brochure.pdf" />
+    <Content Include="js\masterslider\masterslider.min.js.map" />
+    <None Include="scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\jquery-1.9.1.js" />
+    <Content Include="scripts\jquery-1.9.1.min.js" />
+    <Content Include="scripts\plugins\ocLazyLoad.min.js" />
+    <Content Include="scripts\ui-bootstrap-tpls-1.3.3.js" />
+    <Content Include="videos\bits-video1.MOV" />
+    <Content Include="videos\bits-video2.MOV" />
+    <Content Include="videos\bits-video3.MOV" />
+    <Content Include="videos\bits-video4.MOV" />
+    <Content Include="videos\videothumbs\bits-video1-thumb.jpg" />
+    <Content Include="videos\videothumbs\bits-video2-Thumb.jpg" />
+    <Content Include="videos\videothumbs\bits-video3-Thumb.jpg" />
+    <Content Include="videos\videothumbs\bits-video4-Thumb.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
