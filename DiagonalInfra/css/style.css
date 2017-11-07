@@ -123,8 +123,8 @@ p{
 
 .auto-container{
 	position:static;
-	max-width:1200px;
-	padding:0px 15px;
+	max-width:100%;
+	padding:0 10%;
 	margin:0 auto;
 }
 

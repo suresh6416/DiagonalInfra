@@ -94,6 +94,16 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\controller\appController.js" />
+    <Content Include="app\views\aboutUs.html" />
+    <Content Include="app\views\contact.html" />
+    <Content Include="app\views\eBrouchers.html" />
+    <Content Include="app\views\gallery\imageGallery.html" />
+    <Content Include="app\views\gallery\videoGallery.html" />
+    <Content Include="app\views\projects\constructions\completed\bits.html" />
+    <Content Include="app\views\projects\realestates\on-going\lotusHeights.html" />
+    <Content Include="app\views\services.html" />
+    <Content Include="app\views\testimonials.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
