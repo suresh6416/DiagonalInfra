@@ -308,11 +308,7 @@
         $(window).on('load', function () {
             handlePreloader();
         });
-
-        $scope.pauseOrPlay = function (ele) {
-            var video = angular.element(ele.srcElement);
-            video[0].pause(); // video.play()
-        }
+       
     }
 
 }]);
