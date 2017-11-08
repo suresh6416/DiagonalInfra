@@ -124,7 +124,7 @@ p{
 .auto-container{
 	position:static;
 	max-width:100%;
-	padding:0 10%;
+	padding:0 7%;
 	margin:0 auto;
 }
 
@@ -528,7 +528,8 @@ ul,li{
 
 .header-style-one .main-menu .navigation{
 	position:relative;
-	float:right;	
+	float:right;
+    	
 }
 
 .header-style-one .main-menu .navigation > li{
@@ -778,6 +779,7 @@ ul,li{
 	float:right;
 	margin:0px;
 	font-family: 'Montserrat', sans-serif;
+    width:983px;
 }
 
 .header-style-two .main-menu .navigation > li{
