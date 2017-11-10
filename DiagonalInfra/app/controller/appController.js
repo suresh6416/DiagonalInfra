@@ -1,5 +1,7 @@
 ﻿DiagonalInfraApp.controller('appController', ['$rootScope', '$scope', '$state', function ($rootScope, $scope, $state) {
 
+    $scope.playVideo = 1;
+
     $scope.init = function () {
         //Hide Loading Box (Preloader)
         function handlePreloader() {

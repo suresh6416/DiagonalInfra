@@ -1,4 +1,4 @@
-﻿ <!--Video Tour Section-->
+﻿<!--Video Tour Section-->
 <section class="video-tour-section" ng-init="init()">
     <div class="auto-container small-container">
 
@@ -9,48 +9,43 @@
 
         <!--Video Gallery Outer-->
         <div class="video-tour-gallery">
-
             <div class="ms-videogallery-template">
-                <!-- masterslider -->
-                <div class="master-slider ms-skin-default video-gallery" id="video-gallery">
-                    <div class="ms-slide">
-                        <img src="../css/masterslider/style/blank.gif" data-src="../videos/videothumbs/bits-video1-thumb.jpg" alt="">
-                        <div class="ms-thumb">
-                            <img src="../videos/videothumbs/bits-video1-thumb.jpg" alt="video thumb">
-                        </div>
-                        <video controls><source src="../videos/bits-video1.MOV" /></video>
-
-                    </div>
-
-                    <div class="ms-slide">
-                        <img src="../css/masterslider/style/blank.gif" data-src="../videos/videothumbs/bits-video2-Thumb.jpg" alt="">
-                        <div class="ms-thumb">
-                            <img src="../videos/videothumbs/bits-video2-Thumb.jpg" alt="video thumb">
-                        </div>
-                        <video controls><source src="../videos/bits-video2.MOV" /></video>
-
-                    </div>
-
-                    <div class="ms-slide">
-                        <img src="../css/masterslider/style/blank.gif" data-src="../videos/videothumbs/bits-video3-Thumb.jpg" alt="">
-                        <div class="ms-thumb">
-                            <img src="../videos/videothumbs/bits-video3-Thumb.jpg" alt="video thumb">
-                        </div>
-                        <video controls><source src="../videos/bits-video3.MOV" /></video>
-                    </div>
-
-                    <div class="ms-slide">
-                        <img src="../css/masterslider/style/blank.gif" data-src="../videos/videothumbs/bits-video4-Thumb.jpg" alt="">
-                        <div class="ms-thumb">
-                            <img src="../videos/videothumbs/bits-video4-Thumb.jpg" alt="video thumb">
-                        </div>
-                        <video controls><source src="../videos/bits-video4.MOV" /></video>
-                    </div>
-
-                </div>
-                <!-- end of masterslider -->
+                <video controls="controls" autoplay style="width:100%" ng-if="playVideo==1" class="video-player">
+                    <source src="../videos/bits-video1.MOV" />
+                </video>
+                <video controls="controls" autoplay style="width:100%" ng-if="playVideo==2" class="video-player">
+                    <source src="../videos/bits-video2.MOV" />
+                </video>
+                <video controls="controls" autoplay style="width:100%" ng-if="playVideo==3" class="video-player">
+                    <source src="../videos/bits-video3.MOV" />
+                </video>
+                <video controls="controls" autoplay style="width:100%" ng-if="playVideo==4" class="video-player">
+                    <source src="../videos/bits-video4.MOV" />
+                </video>
             </div>
 
+            <div class="col-md-12 margin-top-20">
+                <div class="col-md-3">
+                    <a ng-click="playVideo=1" ng-class="{'active-video-player' :playVideo == 1}">
+                        <img src="../videos/videothumbs/bits-video1-thumb.jpg" alt="video thumb">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a ng-click="playVideo=2" ng-class="{'active-video-player' :playVideo == 2}">
+                        <img src="../videos/videothumbs/bits-video2-Thumb.jpg" alt="video thumb">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a ng-click="playVideo=3" ng-class="{'active-video-player' :playVideo == 3}">
+                        <img src="../videos/videothumbs/bits-video3-Thumb.jpg" alt="video thumb">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a ng-click="playVideo=4" ng-class="{'active-video-player' :playVideo == 4}">
+                        <img src="../videos/videothumbs/bits-video4-Thumb.jpg" alt="video thumb">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
