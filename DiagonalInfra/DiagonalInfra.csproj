@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\controller\appController.js" />
+    <Content Include="app\directive\appDirective.js" />
     <Content Include="app\views\aboutUs.html" />
     <Content Include="app\views\contact.html" />
     <Content Include="app\views\eBrouchers.html" />
@@ -102,10 +103,18 @@
     <Content Include="app\views\gallery\videoGallery.html" />
     <Content Include="app\views\layout\layout.html" />
     <Content Include="app\views\projects\constructions\completed\bits.html" />
-    <Content Include="app\views\projects\realestates\on-going\lotusHeights.html" />
+    <Content Include="app\views\projects\constructions\on-going\lotusHeights.html" />
     <Content Include="app\views\services.html" />
     <Content Include="app\views\testimonials.html" />
     <Content Include="images\diagonalInfraLogo.jpg" />
+    <Content Include="images\gallery\Bits\Bits10.jpg" />
+    <Content Include="images\gallery\Bits\Bits8.jpg" />
+    <Content Include="images\gallery\Bits\Bits9.jpg" />
+    <Content Include="images\gallery\LotusHeights\Lotus1.jpg" />
+    <Content Include="images\gallery\LotusHeights\Lotus2.jpg" />
+    <Content Include="images\gallery\LotusHeights\Lotusconstruction4.jpg" />
+    <Content Include="images\main-slider\structuresarch.jpg" />
+    <Content Include="images\parallax\LotusHeights1.jpg" />
     <Content Include="images\testimonials\b.p.naidu.jpg" />
     <Content Include="images\testimonials\chandrasekhar.jpg" />
     <Content Include="images\testimonials\chandu1.jpg" />
@@ -121,6 +130,12 @@
     </Content>
     <Content Include="scripts\angular.min.js.map" />
     <Content Include="scripts\jquery-1.9.1.min.map" />
+    <None Include="Properties\PublishProfiles\diagonalinfra - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\diagonalinfra - FTP %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\diagonalinfra - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\diagonalinfra - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\diagonalinfra - Web Deploy %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\diagonalinfra - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -291,14 +306,10 @@
     <Content Include="images\gallery\Bits\Bits6.JPG" />
     <Content Include="images\gallery\Bits\Bits7.JPG" />
     <Content Include="images\gallery\Bits\bitsboard.JPG" />
-    <Content Include="images\gallery\Bits\BITSouter1.JPG" />
     <Content Include="images\gallery\ebrouchers\LotusBrochure1.JPG" />
     <Content Include="images\gallery\ebrouchers\LotusBrochure2.JPG" />
     <Content Include="images\gallery\logo1.png" />
     <Content Include="images\gallery\LotusHeights.jpg" />
-    <Content Include="images\gallery\LotusHeights\Lotus.JPG" />
-    <Content Include="images\gallery\LotusHeights\LotusConstruction1.JPG" />
-    <Content Include="images\gallery\LotusHeights\LotusConstruction2.JPG" />
     <Content Include="images\gallery\LotusHeights\LotusConstruction3.JPG" />
     <Content Include="images\gallery\LotusHeights\LotusImg.JPG" />
     <Content Include="images\gallery\LotusHeights\LotusInterior1.JPG" />
@@ -441,7 +452,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\layout\" />
+    <Folder Include="app\views\projects\realestates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

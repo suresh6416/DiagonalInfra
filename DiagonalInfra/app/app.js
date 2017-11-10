@@ -37,7 +37,7 @@ DiagonalInfraApp.config(['$stateProvider', '$urlRouterProvider', '$httpProvider'
         })
         .state('index.lotusHeights', {
             url: '/lotusHeights',
-            templateUrl: 'app/views/projects/realestates/on-going/lotusHeights.html',
+            templateUrl: 'app/views/projects/constructions/on-going/lotusHeights.html',
             data: { pageTitle: 'Lotus Heights' }
         })
         .state('index.services', {
