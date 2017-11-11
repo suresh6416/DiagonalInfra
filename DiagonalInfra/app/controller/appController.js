@@ -36,13 +36,19 @@
 
         //Submenu Dropdown Toggle
         if ($('.main-header li.dropdown > ul').length) {
-            $('.main-header li.dropdown').append('<div class="dropdown-btn"></div>');
+            if (!$('.main-header li.dropdown .dropdown-btn').length) {
+                $('.main-header li.dropdown').append('<div class="dropdown-btn"></div>');
 
-            //Dropdown Button
-            $('.main-header li.dropdown .dropdown-btn').on('click', function () {
-                $(this).prev('ul').slideToggle(500);
-            });
+
+                //Dropdown Button
+                $('.main-header li.dropdown .dropdown-btn').on('click', function () {
+
+                    $(this).prev('ul').slideToggle(500);
+
+                });
+            }
         }
+
 
 
         //Main Slider
