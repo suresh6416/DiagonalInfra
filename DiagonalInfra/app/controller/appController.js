@@ -5,6 +5,7 @@
     $scope.init = function () {
         //Hide Loading Box (Preloader)
         function handlePreloader() {
+            debugger;
             if ($('.preloader').length) {
                 $('.preloader').delay(500).fadeOut(500);
             }
@@ -49,6 +50,14 @@
             }
         }
 
+        //hide dropdown toggle menu on click of links
+        if ($('.main-header .navigation>li>a').length) {
+            $('.main-header .navigation>li>a , .main-header .navigation>li>ul>li>a , .main-header .navigation>li>ul>li>ul>li>a').on('click', function ()
+            {
+                $('.navbar-collapse').collapse('hide');
+            })
+
+        }
 
 
         //Main Slider
@@ -302,6 +311,8 @@
         }
 
         /* ==========================================================================
+
+
            When document is Scrollig, do
            ========================================================================== */
 
