@@ -106,7 +106,9 @@
     <Content Include="app\views\projects\constructions\on-going\lotusHeights.html" />
     <Content Include="app\views\services.html" />
     <Content Include="app\views\testimonials.html" />
+    <Content Include="favicon.ico" />
     <Content Include="images\diagonalInfraLogo.jpg" />
+    <Content Include="images\Fav_Icon.png" />
     <Content Include="images\gallery\Bits\Bits10.jpg" />
     <Content Include="images\gallery\Bits\Bits8.jpg" />
     <Content Include="images\gallery\Bits\Bits9.jpg" />
@@ -390,7 +392,9 @@
     <Content Include="videos\videothumbs\bits-video2-Thumb.jpg" />
     <Content Include="videos\videothumbs\bits-video3-Thumb.jpg" />
     <Content Include="videos\videothumbs\bits-video4-Thumb.jpg" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
