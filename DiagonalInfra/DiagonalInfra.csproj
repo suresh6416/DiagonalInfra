@@ -132,6 +132,8 @@
     </Content>
     <Content Include="scripts\angular.min.js.map" />
     <Content Include="scripts\jquery-1.9.1.min.map" />
+    <None Include="Properties\PublishProfiles\diagonalinfra - FTP %2810%29.pubxml" />
+    <None Include="Properties\PublishProfiles\diagonalinfra - FTP %2811%29.pubxml" />
     <None Include="Properties\PublishProfiles\diagonalinfra - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\diagonalinfra - FTP %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\diagonalinfra - FTP %284%29.pubxml" />
@@ -141,6 +143,8 @@
     <None Include="Properties\PublishProfiles\diagonalinfra - FTP %288%29.pubxml" />
     <None Include="Properties\PublishProfiles\diagonalinfra - FTP %289%29.pubxml" />
     <None Include="Properties\PublishProfiles\diagonalinfra - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\diagonalinfra - Web Deploy %2810%29.pubxml" />
+    <None Include="Properties\PublishProfiles\diagonalinfra - Web Deploy %2811%29.pubxml" />
     <None Include="Properties\PublishProfiles\diagonalinfra - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\diagonalinfra - Web Deploy %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\diagonalinfra - Web Deploy %284%29.pubxml" />
