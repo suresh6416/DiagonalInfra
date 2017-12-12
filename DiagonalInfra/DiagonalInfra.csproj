@@ -116,6 +116,8 @@
     <Content Include="images\gallery\LotusHeights\Lotus1.jpg" />
     <Content Include="images\gallery\LotusHeights\Lotus2.jpg" />
     <Content Include="images\gallery\LotusHeights\Lotusconstruction4.jpg" />
+    <Content Include="images\main-slider\construction.jpg" />
+    <Content Include="images\main-slider\construction2.jpg" />
     <Content Include="images\main-slider\house.jpg" />
     <Content Include="images\main-slider\RealEstate2.jpg" />
     <Content Include="images\main-slider\realEstateHouse.jpg" />
